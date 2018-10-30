@@ -6,4 +6,4 @@
 
 Two of the key features that are planned is **queue processing,** and a **player** which depends on said queue processing. You can see more planned features on Waffle.io.
 
-**!!** You will need ffmpeg for fluent-ffmpeg to work. See this guide [here]
+**!!** You will need ffmpeg for fluent-ffmpeg to work. See this guide [here](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#prerequisites)
