@@ -10,7 +10,9 @@ var input = process.argv;
 
 if(input[0].length > 11) {
   input[0] = input[0].split('?v=')[1];
-  if(input[0].length > 11) input[0] = input[0].split('&t=')[0];
+  if(input[0].includes('&t=')) input[0] = input[0].split('&t=')[0];
+  if(input[0].includes('&list=')) input[0] = input[0].split('&list=')[0];
+  if(input[0].includes('&index=')) input[0] = input[0].split('&index=')[0];
 }
 
 if(input[0].length != 11) throw "ID must be 11 characters long, and/or URL must be valid.";
@@ -18,10 +20,3 @@ if(input[0].length != 11) throw "ID must be 11 characters long, and/or URL must 
 //continue if ID is correct
 
 dl(input[0]);
-
-
-
-
-
-
-
