@@ -6,4 +6,26 @@
 
 Two of the key features that are planned is **queue processing,** and a **player** which depends on said queue processing. You can see more planned features on Waffle.io.
 
-**!!** You will need ffmpeg for fluent-ffmpeg to work. See this guide [here](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#prerequisites)
+## Usage
+
+### Prerequisites
+
+* Node.js
+* ffmpeg and ffprobe ([guide](https://github.com/fluent-ffmpeg/node-fluent-ffmpeg#prerequisites))
+* ffplay
+
+### Installing 
+
+**It is recommended to install this package globally `-g`, as it is its intended use.**
+
+Through NPM: `npm i -g yodl`
+
+You can also clone from the GitHub repo and run `npm i -g` at the root of the project.
+
+### Command Usage
+
+```yodl "[id|url]"```
+
+That's the basic usage *for now*. Quotation marks are optional but necessary when the URL contains '&' like '&time='. Yes, you can pass a URL into the program and it will extract the ID from it. 
+
+Speaking of URLs, YouTube can have extra junk added to the URL, like '&t=' or '&index=', both of which I have tackled already. If you find any URL junk that I haven't found yet, please open an issue on the repo. Thank you!
