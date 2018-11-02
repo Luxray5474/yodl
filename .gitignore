@@ -1,3 +1,4 @@
 .vscode/
 download/
 npm-debug.log*
+*.exe
