@@ -29,3 +29,11 @@ You can also clone from the GitHub repo and run `npm i -g` at the root of the pr
 That's the basic usage *for now*. Quotation marks are optional but necessary when the URL contains '&' like '&time='. Yes, you can pass a URL into the program and it will extract the ID from it. 
 
 Speaking of URLs, YouTube can have extra junk added to the URL, like '&t=' or '&index=', both of which I have tackled already. If you find any URL junk that I haven't found yet, please open an issue on the repo. Thank you!
+
+**If it errors `[ERR!] Error: ffmpeg exited with code 1: No such file or directory`, usually it will mean that you have to create the directory first.** Create it as:
+
+* `C:\Users\[user]\Downloads\yodl` - Windows
+* `/home/[user]/Downloads/yodl` - Linux
+* `/Users/[user]/Downloads/yodl` - macOS
+
+If you have created an output directory beforehand, either wait for the future build when I implement custom output destinations, or manually modify it in source by yourself.
