@@ -24,7 +24,7 @@ module.exports = function(id) {
       var videoTitle = info.player_response.videoDetails.title;
       var videoLength = info.player_response.videoDetails.lengthSeconds;
 
-      log.info(`${soFar()} - title [${videoTitle}] retrieved`);
+      log.info(`${soFar()} - title "${videoTitle}" retrieved`);
       log.info(`${soFar()} - length is ${videoLength}s`);
 
       ffmpeg(stream)
