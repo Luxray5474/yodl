@@ -6,13 +6,16 @@ const os = require('os');
 
 const log = require('./log.js');
 
-module.exports = function(id) {
+module.exports = function(id, args) { //array element delegations are found in app.js
   return new Promise((resolve, reject) => {
     var start = Date.now();
 
+    if(args[1] == "default") args[1] = `${os.homedir()}/Downloads/yodl/`;
+    if(!args[1].includes('/', args[1].length - 1)) args[1] = `${args[1]}/`;
+
     var stream = ytdl(id, { 
-    quality: 'highestaudio', 
-    filter: 'audioonly' 
+      quality: 'highestaudio',
+      filter: 'audioonly'
     });
 
     function soFar() {
@@ -28,7 +31,7 @@ module.exports = function(id) {
       log.info(`${soFar()} - length is ${videoLength}s`);
 
       ffmpeg(stream)
-      .on('start', commandLine => {
+      .on('start', () => {
         log.info(`${soFar()} - spawned video to ffmpeg stream`);
       })
       .on('codecData', data => {
@@ -47,7 +50,7 @@ module.exports = function(id) {
         resolve();
       })
       .audioBitrate(128)
-      .save(`${os.homedir()}/Downloads/yodl/${videoTitle.replace(/[\\/:"*?<>|]+/g, "_")} - ${id}.mp3`)
+      .save(`${args[1]}${videoTitle.replace(/[\\/:"*?<>|]+/g, "_")} - ${id}.mp3`)
       .on('error', err => {
         log.err(`${soFar()} - error: ${err.message}`);
         reject(err);
