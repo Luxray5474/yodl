@@ -1,6 +1,6 @@
 {
   "name": "yodl",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "A YOutube DownLoader. Another wrapper for fent/node-ytdl-core",
   "main": "./bin/app.js",
   "scripts": {
