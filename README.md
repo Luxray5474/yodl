@@ -36,12 +36,20 @@ Quotation marks are optional but necessary when the URL contains '&' like '&time
 
 `-o=[default|path]`
 
+This tells yodl to download to a given path.
+
 * `default` - Default path: `[homedir]/Downloads/yodl/`
 * `path` - A path. Enclose with "".
 
 Example: `yodl -o="C:/Users/Owner/yodl/downloads/"`
 
-This tells yodl to download to said path.
+##### Format
+
+`-f=[mp4|mp3|m4a|mov|avi|flv]`
+
+This tells yodl what output format to use.
+
+* `mp3` - Default
 
 #### Speaking of URLs...
 
