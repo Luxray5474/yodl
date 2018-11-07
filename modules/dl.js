@@ -52,7 +52,6 @@ module.exports = function(id, args) { //array element delegations are found in a
       .audioBitrate(128)
       .save(`${args[1]}${videoTitle.replace(/[\\/:"*?<>|]+/g, "_")} - ${id}.mp3`)
       .on('error', err => {
-        log.err(`${soFar()} - error: ${err.message}`);
         reject(err);
       })
     })

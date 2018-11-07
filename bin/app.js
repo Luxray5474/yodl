@@ -17,7 +17,7 @@ var input = arg(process.argv);
 id(input[0])
   .then((id) => dl(id, input)
     .then(() => process.exit)
-    .catch((err) => log.err(err)))
+    .catch((err) => log.fatal(err)))
   .catch((err) => {
     if(err.message == 'missingID') log.fatal(errs.missingID);
     if(err.message == 'badID') log.fatal(errs.badID);
