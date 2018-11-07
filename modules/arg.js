@@ -13,7 +13,7 @@ module.exports = (input) => {
       var value = currentValue.split('=')[1];
 
       if(prefix == '-o' && argCheck.path(value.replace(/\\/g, '/'))) argsOut[1] = value;
-      if(prefix == '-f' && argCheck.format(value)) argsOut[2] = value;
+      if(prefix == '-f' && argCheck.format(value) && value != 'mp3') argsOut[2] = value;
     } else argsOut[0] = currentValue;
   })
   return argsOut;
