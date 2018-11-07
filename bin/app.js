@@ -12,7 +12,8 @@ process.argv.splice(0, 2);
 var input = arg(process.argv); 
 /* some are subject to change; array elements represent...
 0 - id [str] (permanent)
-1 - output path [str] */
+1 - output path [str] 
+2 - format [str:[mp4|mp3|m4a|mov|avi|flv]]*/
 
 id(input[0])
   .then((id) => dl(id, input)

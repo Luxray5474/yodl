@@ -1,5 +1,6 @@
 {
   "missingID": "Please provide an ID or URL.",
   "badID": "The ID or URL supplied is invalid.",
-  "badOutPath": "Invalid output path. Please check your entry or create the directory first!"
+  "badOutPath": "Invalid output path. Please check your entry or create the directory first!",
+  "badFormat": "Invalid format option. Valid: [mp4|mp3|m4a|mov|avi|flv]"
 }

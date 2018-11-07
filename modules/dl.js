@@ -10,12 +10,17 @@ module.exports = function(id, args) { //array element delegations are found in a
   return new Promise((resolve, reject) => {
     var start = Date.now();
 
+    var filters = 'audioonly';
+    var qualities = 'highestaudio';
+
     if(args[1] == "default") args[1] = `${os.homedir()}/Downloads/yodl/`;
     if(!args[1].includes('/', args[1].length - 1)) args[1] = `${args[1]}/`;
 
+    if(args[2] == "default") args[2] = 'mp3'; else {filters = ''; qualities = '';}
+
     var stream = ytdl(id, { 
-      quality: 'highestaudio',
-      filter: 'audioonly'
+      quality: qualities,
+      filter: filters
     });
 
     function soFar() {
@@ -50,7 +55,7 @@ module.exports = function(id, args) { //array element delegations are found in a
         resolve();
       })
       .audioBitrate(128)
-      .save(`${args[1]}${videoTitle.replace(/[\\/:"*?<>|]+/g, "_")} - ${id}.mp3`)
+      .save(`${args[1]}${videoTitle.replace(/[\\/:"*?<>|]+/g, "_")} - ${id}.${args[2]}`).format(args[2])
       .on('error', err => {
         reject(err);
       })
