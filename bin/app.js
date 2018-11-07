@@ -19,6 +19,6 @@ id(input[0])
     .then(() => process.exit)
     .catch((err) => log.err(err)))
   .catch((err) => {
-    if(err.message == 'missingID') log.err(errs.missingID);
-    if(err.message == 'badID') log.err(errs.badID);
+    if(err.message == 'missingID') log.fatal(errs.missingID);
+    if(err.message == 'badID') log.fatal(errs.badID);
 })
