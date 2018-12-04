@@ -10,12 +10,8 @@ const errs = require('../assets/errors.json');
 process.argv.splice(0, 2);
 
 var input = arg(process.argv); 
-/* some are subject to change; array elements represent...
-0 - id [str] (permanent)
-1 - output path [str] 
-2 - format [str:[mp4|mp3|m4a|mov|avi|flv]]*/
 
-id(input[0])
+id(input[0]) //array element delegations are found in arg.js
   .then((id) => dl(id, input)
     .then(() => process.exit)
     .catch((err) => log.fatal(err)))
