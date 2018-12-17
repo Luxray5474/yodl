@@ -1,5 +1,13 @@
 # yodl
 
+## This project has been abandoned until further notice.
+
+There are much better downloaders out there with the exact same proposed features as this one; go use them instead. Personally this has become an empty commitment and a waste of time. I can no longer maintain this failed, short-lived attempt at fulfilling a big dream. 
+
+I thank the three amazing people that starred this project, and more importantly, apologize for letting you down.
+
+<hr>
+
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/Luxray5474/yodl.svg?columns=all)](https://waffle.io/Luxray5474/yodl)
 
 ...not to be confused with [mgrahamjo/yodel](https://github.com/mgrahamjo/yodel), stands for **Yo**utube **D**own**l**oader. It is a wrapper for [fent/node-ytdl-core](https://github.com/fent/node-ytdl-core), just like [JimmyBoh/pully](https://github.com/JimmyBoh/pully) and [fent/node-ytdl](https://github.com/fent/node-ytdl). It (will) take inspiration from those two as well. Because of that, I was originally going to name it "yet another node youtube downloader wrapper", but 'yanydw' doesn't roll off the tongue as well. 
